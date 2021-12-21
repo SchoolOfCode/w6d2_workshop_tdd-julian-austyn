@@ -1,23 +1,37 @@
-export default function (letter) {
-  if (['a', 'e', 'i', 'o', 'u', 'l', 'n', 'r', 's', 't'].includes(letter)) {
-    return 1;
-  }
-  if (['d', 'g'].includes(letter)) {
-    return 2;
-  }
-  if (['b', 'c', 'm', 'p'].includes(letter)) {
-    return 3;
-  }
-  if (['f', 'h', 'v', 'w', 'y'].includes(letter)) {
-    return 4;
-  }
-  if (['k'].includes(letter)) {
-    return 5;
-  }
-  if (['j', 'x'].includes(letter)) {
-    return 8;
-  }
-  if (['q', 'z'].includes(letter)) {
-    return 10;
+export default function scrabbleScore(letter) {
+  switch (letter) {
+    case 'a':
+    case 'e':
+    case 'i':
+    case 'o':
+    case 'u':
+    case 'l':
+    case 'n':
+    case 'r':
+    case 's':
+    case 't':
+      return 1;
+    case 'd':
+    case 'g':
+      return 2;
+    case 'b':
+    case 'c':
+    case 'm':
+    case 'p':
+      return 3;
+    case 'f':
+    case 'h':
+    case 'v':
+    case 'w':
+    case 'y':
+      return 4;
+    case 'k':
+      return 5;
+    case 'j':
+    case 'x':
+      return 8;
+    case 'q':
+    case 'z':
+      return 10;
   }
 }
